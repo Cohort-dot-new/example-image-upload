@@ -1,0 +1,11 @@
+<%= form_tag "/products", method: :post, multipart: true do %>
+  <div>
+    <%= label_tag :name %>
+    <%= text_field_tag :name %>
+  </div>
+  <div>
+    <%= label_tag :image %>
+    <%= file_field_tag :image, accept: 'image/*;capture=camera' %>
+  </div>
+  <%= submit_tag "Create product" %>
+<% end %>
